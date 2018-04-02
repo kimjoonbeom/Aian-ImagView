@@ -10,16 +10,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var counter = 1;
+    var direction = 1;
+    @IBOutlet weak var myimageview: UIImageView!
+    @IBOutlet weak var index: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // 첫번째 이미지를 로드함
+        myimageview.image = UIImage(named:"frame1.png")
+        index.text = "1"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    @IBAction func imageUpdata(_ sender: Any) {
+        
+    if counter == 5 {
+        direction = 0
+        }
+    else if counter == 1{
+        direction = 1
+        }
+        if direction == 1{
+            counter += 1;}
+        else if direction == 0{
+            counter = counter - 1
+            }
+        
+        myimageview.image = UIImage(named: "frame\(counter).png")
+        index.text = String(counter)
 }
-
+    
+}
