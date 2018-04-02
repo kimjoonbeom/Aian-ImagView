@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        // 첫번째 이미지를 로드함
+        // 첫번째 이미지를 로드함 hhhhhh
         myimageview.image = UIImage(named:"frame1.png")
         index.text = "1"
     }
